@@ -1,15 +1,15 @@
 {
   "name": "histgen",
   "version": "0.1.0",
-  "description": "generato history markdown from commit",
+  "description": "Generate history markdown from commit",
   "main": "index",
   "dependencies": {
     "commander": "~2.6.0",
-    "mkdirp": "~0.5.0",
-    "mm": "~1.0.1"
+    "mkdirp": "~0.5.0"
   },
   "devDependencies": {
     "coveralls": "2",
+    "mm": "~1.0.1",
     "istanbul": "0",
     "jshint": "*",
     "mocha": "1",
