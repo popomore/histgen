@@ -65,7 +65,7 @@ describe('histgen', function() {
       .gen('1.0.0', function(err) {
         should.not.exists(err);
         exists(target).should.be.true;
-        fs.readFileSync(target).toString().should.eql('## 1.0.0 / 2015-01-09\n\n- line1\n- line2\n\n');
+        fs.readFileSync(target).toString().should.match(/## 1.0.0 \/ \d{4}-\d{2}-\d{2}\n\n- line1\n- line2\n\n/);
         done();
       });
     });
@@ -82,7 +82,7 @@ describe('histgen', function() {
       .gen('1.0.0', function(err) {
         should.not.exists(err);
         exists(target).should.be.true;
-        fs.readFileSync(target).toString().should.eql('## 1.0.0 / 2015-01-09\n\n- line1\n- line2\n\ntarget');
+        fs.readFileSync(target).toString().should.match(/## 1.0.0 \/ \d{4}-\d{2}-\d{2}\n\n- line1\n- line2\n\ntarget/);
         done();
       });
     });
